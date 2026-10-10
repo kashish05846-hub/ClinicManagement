@@ -10,7 +10,7 @@ const Nav = () => {
       <Link to="/about">About</Link>
       <Link to="/doctors">Doctors</Link>
       <Link to="/services">Services</Link>
-      <Link to="/contact">Contat</Link>
+      <Link to="/contact">Contact</Link>
       <button className="login-button" onClick={() => navigate("/login")}>
         Login
       </button>
