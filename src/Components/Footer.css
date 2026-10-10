@@ -1,0 +1,167 @@
+/* =========================
+   FOOTER SECTION
+========================= */
+
+.footer-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 30px 50px;
+  margin-top: 0;
+
+  background-color: #f5f9fc;
+}
+.footer-section > div {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 30%;
+  text-align: left;
+}
+
+/* Footer Images / Icons */
+
+.footer-section img {
+  display: block;
+
+  width: 50px;
+  height: 50px;
+
+  object-fit: contain;
+
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+/* Footer Headings */
+
+.footer-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+
+  color: #202a32;
+
+  transition: color 0.2s ease;
+}
+
+.footer-section h3:hover {
+  color: rgb(47, 107, 245);
+}
+
+/* Footer Text */
+
+.footer-section p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+
+  margin: 0;
+
+  color: #65727b;
+}
+
+/* Footer Links / Icon Text */
+
+.footer-section span {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  gap: 10px;
+
+  color: black;
+  cursor: pointer;
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .footer-section {
+    padding: 28px 25px;
+    gap: 25px;
+    max-height: auto;
+  }
+
+  .footer-section > div {
+    flex: 1 1 40%;
+    max-width: 45%;
+  }
+
+  .footer-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .footer-section p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .footer-section img {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 480px) {
+  .footer-section {
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 28px;
+
+    padding: 28px 20px;
+  }
+
+  .footer-section > div {
+    width: 100%;
+    max-width: 100%;
+    flex: 1 1 auto;
+  }
+
+  .footer-section img {
+    width: 42px;
+    height: 42px;
+
+    margin-bottom: 10px;
+  }
+
+  .footer-section h3 {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+  }
+
+  .footer-section p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .footer-section span {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+}
+
+/* =========================
+   EXTRA SMALL MOBILE
+========================= */
+
+@media (max-width: 320px) {
+  .footer-section {
+    padding: 24px 15px;
+    gap: 22px;
+  }
+
+  .footer-section h3 {
+    font-size: 1rem;
+  }
+
+  .footer-section p {
+    font-size: 0.85rem;
+  }
+}

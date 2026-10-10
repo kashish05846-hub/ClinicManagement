@@ -1,0 +1,342 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.patient-registration-page {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 35px 6% 50px;
+
+  background: #f5f9fc;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.registration-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  margin-bottom: 28px;
+}
+
+.page-label {
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  color: #5267ef;
+
+  margin-bottom: 7px;
+}
+
+.registration-header h1 {
+  font-size: 30px;
+  color: #202a32;
+
+  margin-bottom: 6px;
+}
+
+.page-subtitle {
+  font-size: 14px;
+  color: #74808a;
+}
+
+.back-btn {
+  padding: 11px 17px;
+
+  border: 1px solid #d8e2e8;
+  border-radius: 5px;
+
+  background: white;
+  color: #5267ef;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background: #f1f5ff;
+}
+
+/* =========================
+   MAIN BOX
+========================= */
+
+.registration-box {
+  width: 100%;
+
+  padding: 30px;
+
+  background: white;
+
+  border: 1px solid #e0e9ef;
+
+  border-radius: 8px;
+}
+
+.registration-title {
+  margin-bottom: 28px;
+
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #edf1f4;
+}
+
+.registration-title h2 {
+  font-size: 21px;
+
+  color: #27323a;
+
+  margin-bottom: 6px;
+}
+
+.registration-title p {
+  font-size: 13px;
+
+  color: #818c94;
+}
+
+/* =========================
+   FORM SECTION
+========================= */
+
+.form-section {
+  margin-bottom: 30px;
+}
+
+.form-section > h3 {
+  font-size: 17px;
+
+  color: #303b43;
+
+  margin-bottom: 18px;
+}
+
+/* =========================
+   FORM GRID
+========================= */
+
+.form-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 18px;
+}
+
+.three-column {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.form-group {
+  margin-bottom: 2px;
+}
+
+.form-group label {
+  display: block;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #303840;
+
+  margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+
+  border: 1px solid #d7e1e7;
+
+  border-radius: 5px;
+
+  background: white;
+
+  outline: none;
+
+  color: #333;
+
+  font-size: 13px;
+
+  font-family: inherit;
+
+  transition: 0.2s;
+}
+
+.form-group input,
+.form-group select {
+  height: 42px;
+
+  padding: 0 13px;
+}
+
+.form-group textarea {
+  padding: 12px 13px;
+
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #a5afb7;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #5267ef;
+
+  box-shadow: 0 0 0 2px rgba(82, 103, 239, 0.08);
+}
+
+.full-width {
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.form-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  padding-top: 25px;
+
+  border-top: 1px solid #edf1f4;
+}
+
+.cancel-btn,
+.save-btn {
+  height: 42px;
+
+  padding: 0 22px;
+
+  border-radius: 5px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.cancel-btn {
+  border: 1px solid #d6e0e6;
+
+  background: white;
+
+  color: #65727b;
+}
+
+.cancel-btn:hover {
+  background: #f7fafc;
+}
+
+.save-btn {
+  border: none;
+
+  background: #5267ef;
+
+  color: white;
+}
+
+.save-btn:hover {
+  background: #4155d8;
+}
+
+/* =========================
+   MESSAGE
+========================= */
+
+.registration-message {
+  text-align: center;
+
+  margin-top: 15px;
+
+  font-size: 13px;
+}
+
+.registration-message.success {
+  color: #198754;
+}
+
+.registration-message.error {
+  color: #dc3545;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 850px) {
+  .three-column {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+  .patient-registration-page {
+    padding: 25px 15px 40px;
+  }
+
+  .registration-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .back-btn {
+    width: 100%;
+  }
+
+  .registration-box {
+    padding: 20px;
+  }
+
+  .form-grid,
+  .three-column {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+  .form-group {
+    margin-bottom: 18px;
+  }
+
+  .full-width {
+    margin-top: 0;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .cancel-btn,
+  .save-btn {
+    width: 100%;
+  }
+}

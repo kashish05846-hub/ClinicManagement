@@ -1,0 +1,376 @@
+/* =========================
+   HOME HERO / SLIDER
+========================= */
+
+.section {
+  position: relative;
+  isolation: isolate;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.section-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 580px;
+  min-width: 0;
+
+  margin: 0;
+  margin-left: 100px;
+  overflow-wrap: break-word;
+}
+
+.section-content h1 {
+  margin-bottom: 20px;
+
+  color: #202a32;
+
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.2;
+  font-weight: 700;
+
+  overflow-wrap: break-word;
+}
+
+.section-content h1 span {
+  color: #5267ef;
+}
+
+.section-content p {
+  max-width: 100%;
+
+  margin-bottom: 28px;
+
+  color: #303840;
+
+  font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+  line-height: 1.7;
+
+  overflow-wrap: break-word;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.section-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  max-width: 100%;
+}
+
+.section-buttons a {
+  display: inline-block;
+  max-width: 100%;
+  text-decoration: none;
+}
+
+.section-button {
+  min-height: 44px;
+  max-width: 100%;
+
+  padding: 10px 20px;
+  margin: 0;
+
+  border: 2px solid #5267ef;
+  border-radius: 5px;
+
+  background-color: #5267ef;
+  color: #ffffff;
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  overflow-wrap: break-word;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.section-button:hover {
+  background-color: #4055db;
+  border-color: #4055db;
+}
+
+.section-button.Learn-More {
+  background-color: #f5f9fc;
+  color: #455cf1;
+  border: 2px solid #455cf1;
+}
+
+.section-button.Learn-More:hover {
+  background-color: #455cf1;
+  color: #ffffff;
+}
+
+/* =========================
+   SLIDER ARROWS
+========================= */
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  z-index: 3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+  padding: 0;
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 50%;
+
+  background-color: rgba(255, 255, 255, 0.92);
+  color: #333333;
+
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.slider-button:hover {
+  background-color: #5267ef;
+  color: #ffffff;
+}
+
+.slider-button.prev {
+  left: 12px;
+}
+
+.slider-button.next {
+  right: 12px;
+}
+
+/* =========================
+   SLIDER DOTS
+========================= */
+
+.slider-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  z-index: 3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.dot {
+  width: 11px;
+  height: 11px;
+  flex-shrink: 0;
+
+  padding: 0;
+  border: 1px solid #5267ef;
+  border-radius: 50%;
+
+  background-color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #5267ef;
+  transform: scale(1.15);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+  .section {
+    width: 100%;
+    min-width: 0;
+    min-height: 500px;
+
+    padding: 40px 45px 55px;
+
+    background-size: cover;
+    background-position: 65% center;
+    background-repeat: no-repeat;
+  }
+
+  .section-content {
+    width: 100%;
+    max-width: 520px;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .section-content h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+
+  .section-content p {
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 22px;
+  }
+
+  .section-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .section-button {
+    padding: 10px 14px;
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .slider-button {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+  }
+
+  .slider-button.prev {
+    left: 6px;
+  }
+
+  .slider-button.next {
+    right: 6px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .section {
+    width: 100%;
+    min-height: 500px;
+
+    padding: 35px 32px 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    /* Image poore section ke background mein rahegi */
+    background-size: cover;
+    background-position: 65% center;
+    background-repeat: no-repeat;
+  }
+
+  .section-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+
+    position: relative;
+    z-index: 2;
+  }
+
+  .section-content h1 {
+    font-size: 1.8rem;
+    line-height: 1.25;
+    margin-bottom: 13px;
+  }
+
+  .section-content p {
+    max-width: 100%;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    margin-bottom: 20px;
+  }
+
+  .section-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .section-button {
+    padding: 9px 10px;
+    min-height: 38px;
+    font-size: 0.85rem;
+  }
+
+  .slider-button {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .slider-button.prev {
+    left: 5px;
+  }
+
+  .slider-button.next {
+    right: 5px;
+  }
+
+  .slider-dots {
+    bottom: 13px;
+    gap: 7px;
+  }
+}
+/* =========================
+   EXTRA SMALL MOBILE
+========================= */
+
+@media (max-width: 360px) {
+  .section {
+    min-height: 460px;
+    padding: 30px 28px 55px;
+
+    background-size: cover;
+    background-position: 65% center;
+  }
+
+  .section-content h1 {
+    font-size: 1.55rem;
+  }
+
+  .section-content p {
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
+  .section-button {
+    padding: 8px 9px;
+    font-size: 0.8rem;
+  }
+}

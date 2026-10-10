@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-size: 18px;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.login-button {
+  background-color: #092df9e3;
+  color: white !important;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  text-decoration: none;
+  display: inline-block;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.login-button:hover {
+  background-color: #455ff3e3;
+}
+
+.nav a:hover {
+  color: #047bfa;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+  .nav {
+    gap: 20px;
+    padding: 10px 15px;
+  }
+
+  .nav a {
+    font-size: 16px;
+  }
+
+  .login-button {
+    padding: 9px 16px;
+    font-size: 16px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .nav {
+    width: 100%;
+    gap: 12px;
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav a {
+    font-size: 14px;
+  }
+
+  .login-button {
+    padding: 8px 13px;
+    font-size: 15px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 320px) {
+  .nav {
+    gap: 8px;
+    padding: 8px 5px;
+  }
+
+  .nav a {
+    font-size: 12px;
+  }
+
+  .login-button {
+    padding: 7px 10px;
+    font-size: 13px;
+  }
+}
