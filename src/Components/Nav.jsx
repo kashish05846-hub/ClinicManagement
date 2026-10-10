@@ -12,7 +12,7 @@ const Nav = () => {
       <Link to="/services">Services</Link>
       <Link to="/contact">Contact</Link>
       <button className="login-button" onClick={() => navigate("/login")}>
-        SignIn
+        Login
       </button>
     </nav>
   );
