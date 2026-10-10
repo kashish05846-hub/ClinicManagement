@@ -9,7 +9,7 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Doctors from "./Pages/Doctors";
 import Services from "./Pages/Services";
-import Signup from "./Pages/SignUp";
+import Signup from "./Pages/Signup.jsx";
 import Appointment from "./Pages/Appointment";
 import LearnMore from "./Pages/LearnMore";
 
