@@ -22,7 +22,7 @@ const slides = [
     image: doctor2,
     title: "Modern Healthcare",
     highlight: "For Everyone",
-    text: "Advanced facilities and trusted medical services under one roof.",
+    text: "Advanced facilities and trusted<br/>medical services under one roof.",
   },
 ];
 

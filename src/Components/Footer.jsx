@@ -35,8 +35,7 @@ const Footer = () => {
         </span>
         <p>
           We are always here for you, providing round-the-clock support and
-          assistance whenever you need us. Your health and well-being are our
-          priority.
+          assistance whenever you need us.
         </p>
       </div>
     </div>
