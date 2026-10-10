@@ -34,8 +34,8 @@ const Footer = () => {
           <h3>24/7 Support</h3>
         </span>
         <p>
-          We are always here for you, providing round-the-clock support and
-          assistance whenever you need us.
+          Our team is always available to assist you with your healthcare needs,
+          anytime, day or night.
         </p>
       </div>
     </div>
