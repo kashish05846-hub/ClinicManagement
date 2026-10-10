@@ -33,7 +33,11 @@ const Footer = () => {
           <img src={images} alt="Not found" />
           <h3>24/7 Support</h3>
         </span>
-        <p>Always Here for you</p>
+        <p>
+          We are always here for you, providing round-the-clock support and
+          assistance whenever you need us. Your health and well-being are our
+          priority.
+        </p>
       </div>
     </div>
   );
