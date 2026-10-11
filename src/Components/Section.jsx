@@ -2,8 +2,8 @@ import { memo, useEffect, useState } from "react";
 import "./Section.css";
 import { Link } from "react-router-dom";
 import doctor1 from "../assets/homedoctor1.png";
-import doctor2 from "../assets/homedoctor2.png";
-import homeSection from "../assets/homeSection.png";
+import doctor2 from "../assets/homePage1.png";
+import homeSection from "../assets/homePage2.png";
 
 const slides = [
   {
