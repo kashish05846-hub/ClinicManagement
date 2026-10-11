@@ -20,6 +20,7 @@ import PatientRegistration from "./Pages/PatientRegistration";
 import DoctorRegistration from "./Pages/DoctorRegistration";
 import Appointments from "./Pages/Apointments";
 import Prescription from "./Pages/Prescription";
+import ModernEquipment from "./Pages/ModernEquipment.jsx";
 
 const App = () => {
   return (
@@ -46,6 +47,8 @@ const App = () => {
           <Route path="/doctor-registration" element={<DoctorRegistration />} />
           <Route path="/appointments" element={<Appointments />} />
           <Route path="/prescription" element={<Prescription />} />
+          <Route path="/modern-equipment" element={<ModernEquipment />} />
+
           <Route path="*" element={<h2>404 - Page Not Found</h2>} />
         </Routes>
       </main>

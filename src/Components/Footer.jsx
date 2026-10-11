@@ -19,7 +19,7 @@ const Footer = () => {
         </p>
       </div>
       <div className="medikit">
-        <span onClick={() => navigate("/equipment")}>
+        <span onClick={() => navigate("/modern-equipment")}>
           <img src={medikit} alt="Not found" />
           <h3>Modern Equipment</h3>
         </span>

@@ -1,15 +1,34 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* =========================
+   NAVBAR WRAPPER
+========================= */
+
+.nav-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* =========================
+   DESKTOP NAVBAR
+========================= */
+
 .nav {
   display: flex;
-  gap: 40px;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  gap: 40px;
+  flex-wrap: nowrap;
 }
 
 .nav a {
@@ -21,16 +40,23 @@
   transition: color 0.2s ease;
 }
 
+.nav a:hover {
+  color: #047bfa;
+}
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
 .login-button {
   background-color: #092df9e3;
-  color: white !important;
+  color: white;
   border-radius: 5px;
   cursor: pointer;
   border: none;
   padding: 10px 20px;
   font-size: 18px;
   font-family: "Times New Roman", Times, serif;
-  text-decoration: none;
   display: inline-block;
   white-space: nowrap;
   transition: background-color 0.2s ease;
@@ -40,95 +66,15 @@
   background-color: #455ff3e3;
 }
 
-.nav a:hover {
-  color: #047bfa;
-}
-
 /* =========================
-   TABLET
+   THREE-LINE MENU BUTTON
 ========================= */
 
-@media (max-width: 768px) {
-  .nav {
-    gap: 20px;
-    padding: 10px 15px;
-  }
-
-  .nav a {
-    font-size: 16px;
-  }
-
-  .login-button {
-    padding: 9px 16px;
-    font-size: 16px;
-  }
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 480px) {
-  .nav {
-    width: 100%;
-    gap: 12px;
-    padding: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .nav a {
-    font-size: 14px;
-  }
-
-  .login-button {
-    padding: 8px 13px;
-    font-size: 15px;
-  }
-}
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media (max-width: 320px) {
-  .nav {
-    gap: 8px;
-    padding: 8px 5px;
-  }
-
-  .nav a {
-    font-size: 12px;
-  }
-
-  .login-button {
-    padding: 7px 10px;
-    font-size: 13px;
-  }
-}
-
-/* Desktop navbar */
-.nav-wrapper {
-  position: relative;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-}
-
-.nav a {
-  text-decoration: none;
-  color: #111;
-  font-size: 17px;
-  font-weight: 600;
-}
-
-/* 3 line button */
 .menu-btn {
   display: none;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 5px;
   padding: 8px;
   border: none;
@@ -140,38 +86,53 @@
   display: block;
   width: 28px;
   height: 3px;
-  background: #092d7a;
+  background-color: #092d7a;
   border-radius: 3px;
 }
 
-/* Mobile screen */
+/* =========================
+   TABLET AND MOBILE
+========================= */
+
 @media (max-width: 768px) {
+  /* Show hamburger button */
   .menu-btn {
     display: flex;
   }
 
+  /* Hide menu by default */
   .nav {
     display: none;
     position: absolute;
-    top: 45px;
+    top: calc(100% + 8px);
     right: 0;
     width: 220px;
+    max-width: calc(100vw - 30px);
     flex-direction: column;
     align-items: stretch;
+    justify-content: flex-start;
     gap: 0;
     padding: 8px 0;
-    background: white;
-    box-shadow: 0 4px 12px #0002;
+    background-color: white;
     border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     z-index: 1000;
   }
 
+  /* Show menu when clicked */
   .nav.nav-open {
     display: flex;
   }
 
   .nav a {
+    font-size: 16px;
     padding: 13px 18px;
     border-bottom: 1px solid #eee;
+  }
+
+  .nav .login-button {
+    margin: 10px 15px;
+    padding: 9px 16px;
+    font-size: 16px;
   }
 }
